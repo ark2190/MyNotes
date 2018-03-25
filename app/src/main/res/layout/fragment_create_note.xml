@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mynotes.ui.create.CreateNoteFragment">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/etNote"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:gravity="start|top"
+        android:inputType="textCapSentences|textMultiLine"
+        android:textColor="@color/black"
+        android:hint="@string/label_hint_write_note"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:maxLength="@integer/max_note_length"
+        android:minLines="10" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/label_save"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</LinearLayout>
