@@ -4,6 +4,7 @@ import android.app.Application
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.mynotes.BuildConfig
 import com.mynotes.core.api.ApiManager
+import com.mynotes.core.api.DummyResponseInterceptor
 import dagger.Module
 import dagger.Provides
 import okhttp3.Cache
@@ -16,7 +17,7 @@ import javax.inject.Singleton
 /**
  * Created by Anurag on 25-03-2018.
  */
-@Module(includes = arrayOf(AppModule::class))
+@Module(includes = [AppModule::class])
 class NetworkModule {
 
     @Provides
@@ -28,8 +29,9 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    internal fun provideOkHttpClient(cache: Cache): OkHttpClient {
+    internal fun provideOkHttpClient(cache: Cache, objectMapper: ObjectMapper): OkHttpClient {
         val clientBuilder = OkHttpClient.Builder()
+                .addInterceptor(DummyResponseInterceptor(objectMapper))
                 .cache(cache)
         return clientBuilder.build()
     }

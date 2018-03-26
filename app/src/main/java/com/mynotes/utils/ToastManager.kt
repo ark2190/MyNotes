@@ -6,7 +6,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Created by ark21 on 25-03-2018.
+ * Created by Anurag on 25-03-2018.
  */
 @Singleton
 class ToastManager @Inject constructor(private val mContext: Context) {

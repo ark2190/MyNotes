@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.mynotes.ui.create.CreateNoteFragment">
+    tools:context="com.mynotes.ui.create.AddNoteFragment">
 
     <android.support.v7.widget.AppCompatEditText
         android:id="@+id/etNote"

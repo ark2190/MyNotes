@@ -5,4 +5,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="label_save">Save</string>
     <string name="label_hint_write_note">Write a note (300 characters max)</string>
+    <string name="label_add_new_note">Add new note</string>
+    <string name="label_no_notes_placeholder">You do not have any notes. Start by adding a new note!</string>
 </resources>
